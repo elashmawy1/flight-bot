@@ -5,8 +5,12 @@ import requests
 from flask import Flask, request, jsonify
 
 try:
-    from dotenv import load_dotenv
-    load_dotenv()
+   import os
+import re
+import json
+import requests
+from flask import Flask, request, jsonify
+from serpapi import GoogleSearch
 except ImportError:
     pass
 from serpapi import GoogleSearch
