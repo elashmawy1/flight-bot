@@ -2,10 +2,13 @@ import os
 import re
 import json
 import requests
-from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 from serpapi import GoogleSearch
 
 app = Flask(__name__)
